@@ -54,9 +54,8 @@ pause="$(printf '%s\n\n' --pause | dmenu -p "Start paused?")"
 
 exec mpv "${link}" \
      --ytdl-format="${chosen_format:?}" \
-     --force-window=yes \
+     --profile=gui
      --load-unsafe-playlists \
      ${pause} \
      --ytdl-raw-options=yes-playlist= \
      --loop-playlist=inf \
-     --no-terminal
